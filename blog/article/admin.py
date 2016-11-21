@@ -1,5 +1,5 @@
 from django.contrib import admin
-from article.models import Article, Comment,Book
+from article.models import Article, Comment
 
 class CommentModelAdmin(admin.ModelAdmin):
     list_display = ['article', 'content']
@@ -13,4 +13,3 @@ class CommentModelAdmin(admin.ModelAdmin):
     
 admin.site.register(Article)
 admin.site.register(Comment)
-admin.site.register(Book)
