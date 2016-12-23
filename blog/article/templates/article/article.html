@@ -1,16 +1,10 @@
-<!doctype html>
+{% extends 'main/base.html' %}
 {% load staticfiles %}
-<html>
-<head>
-<title>部落格</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+{% block css %}
 <link rel="stylesheet" href="{% static 'article/css/article.css' %}">
-</head>
-<body>
-{% include 'main/menu.html' %}
-<h1>歡迎來到我的部落格</h1>
-{% include 'main/messages.html' %}
+{% endblock %}
+{% block heading %}歡迎蒞臨{% endblock %}
+{% block content %}
 {% include 'article/searchForm.html' %}
 <br>
 <p class="inlineBlock"><a class="btn" href="{% url 'article:articleCreate' %}">新增文章</a>
@@ -35,6 +29,4 @@
   {% endfor %}
   <hr>
 {% endfor %}
-<br>
-</body>
-</html>
+{% endblock %}
