@@ -9,14 +9,11 @@
 </head>
 <body>
 {% include 'main/menu.html' %}
-<h1>歡迎來到我的書庫</h1>
+<h1>歡迎參觀，裡面選購！</h1>
 <br>
 {% for book in books %}
-      <h3>書名：{{ book.title }}</h3>
-      <p>作者:{{ book.author }}</p>
-      <p>出版商:{{ book.publisher }}</p>
-      <p>發表日期:{{ book.pubdate|date:'Y-m-d' }}</p>
-      <p>第幾版:{{ book.version }}</p>
+      <h3>商品：{{ book.title }}</h3>
+      <p>材質:{{ book.material }}</p>
       <p>價格:{{ book.price }}</p>
   <hr>
 {% endfor %}
